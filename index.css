@@ -27,7 +27,7 @@ body {
 
 .chat-box .message {
   width: 100%;
-  max-width: 600px;
+  max-width: 300px;
   margin: 50px auto;
   padding: 10px;
   background-color: #f7f7f7;
