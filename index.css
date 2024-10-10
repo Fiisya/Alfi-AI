@@ -57,11 +57,7 @@ body {
             padding: 10px;
             cursor: pointer;
             border-radius: 4px;
-        }
-
-        #send-btn:hover {
-            background-color: #0056b3;
-        }
+}
 
 .timestamp {
     font-size: 0.8em;
