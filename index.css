@@ -95,13 +95,14 @@ body {
 }
 
 #send-btn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
+  background-color: #10a37f;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-left: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
 #send-btn:hover {
   background-color: #0056b3;
