@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: lightblue;
+    background-color: #f4f4f9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    padding: 60px;
+    padding: 20px;
 }
 
 .chat-box {
