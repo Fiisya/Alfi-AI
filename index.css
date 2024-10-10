@@ -43,7 +43,7 @@ body {
   cursor: pointer;
 }
 
-#user-input {
+#input {
     width: 100%;
   display: flex;
   align-items: center;
