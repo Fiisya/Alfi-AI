@@ -19,7 +19,7 @@ document.getElementById('send-btn').addEventListener('click', async () => {
 
         async function fetchAIResponse(message) {
             try {
-                const response = await fetch(`https://widipe.com/ai/c-ai?prompt=Aku%20adalah%20Alfi%20AI%20yang%20di%20rancang%20untuk%20membantu%20Anda%20dalam%20pertanyaan%20Anda%2C%20dan%20saya%20di%20ciptakan%20oleh%20seorang%20programmer%20yang%20bernama%20Alfi%20Syahrial%20Yang%20handsome%20xixixi&text=${encodeURIComponent(message)}`);
+                const response = await fetch(`https://api.kyuurzy.site/api/ai/aiprompt?prompt=Kamu Adalah "Ken - MD", Kamu Di Lengkapi Dengan Kemampuan Komunikasi Yang Sangat - Sangat Baik, Karakter Kamu Baik Dan Ramah, Kamu Juga Sangat Pintar Dalam Melakukan Dan Memberi Saran, Dan Juga Kamu Mempunyai Owner Bernama "alfi", Ubah Bahasa Mu Menjadi Bahasa Gaul, Ubah Hai ke "Hallo Tod" Dan Kak "Tod&query=${encodeURIComponent(message)}`);
                 const data = await response.json();
                 
                 appendMessage('🤖', data.result || 'No response received');
