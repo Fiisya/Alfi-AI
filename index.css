@@ -19,6 +19,15 @@ body {
     max-height: 90vh;
 }
 
+.chat-header {
+      background-color: #10a37f;
+      padding: 15px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+}
+
 .chat-box {
     flex-grow: 1;
     overflow-y: auto;
