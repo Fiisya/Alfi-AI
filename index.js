@@ -24,8 +24,8 @@ document.getElementById('send-btn').addEventListener('click', async () => {
                 
                 appendMessage('', data.result || 'No response received');
             } catch (error) {
-                appendMessage('', 'Error: Unable to connect to the API');
-                console.error('API Error:', error);
+                appendMessage('', 'Error Unable to connect to the API');
+                console.error('API Error', error);
             }
         }
 
