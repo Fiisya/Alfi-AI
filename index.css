@@ -41,9 +41,12 @@ body {
 
 #user-input {
     width: 100%;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px; /* Space between input and button */
+    resize: none; /* Disable resizing */
 }
 
 #send-btn {
@@ -52,7 +55,10 @@ body {
     border: none;
     padding: 10px;
     cursor: pointer;
-    border-radius: 4px;     
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #send-btn:hover {
