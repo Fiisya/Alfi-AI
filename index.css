@@ -26,7 +26,7 @@ body {
 }
 
 .chat-box .message {
-    width: 100%;
+  width: 100%;
   max-width: 600px;
   margin: 50px auto;
   padding: 10px;
@@ -37,7 +37,7 @@ body {
 
 .chat-box .user-message {
     align-self: flex-end;
-    background-color: #0056b3;
+    background-color: #e5ddd5;
     color: white;
     border-radius: 8px;
     padding: 8px 12px;
