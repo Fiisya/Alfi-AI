@@ -51,23 +51,17 @@ body {
 }
 
 #send-btn {
-    width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #555;
-  color: #fff;
-  margin-right: 10px;
-}
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
 
-#send-btn:hover {
-    padding: 10px;
-  border-radius: 50%;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
+        #send-btn:hover {
+            background-color: #0056b3;
+        }
 
 .timestamp {
     font-size: 0.8em;
