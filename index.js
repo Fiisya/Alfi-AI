@@ -19,7 +19,7 @@ document.getElementById('send-btn').addEventListener('click', async () => {
 
         async function fetchAIResponse(message) {
             try {
-                const response = await fetch(`https://api.kyuurzy.site/api/ai/aiprompt?prompt=Kamu Adalah "Alfi AI", Kamu Di Lengkapi Dengan Kemampuan Komunikasi Yang Sangat - Sangat Baik, Karakter Kamu Baik Dan Ramah, Kamu Juga Sangat Pintar Dalam Melakukan Dan Memberi Saran, Dan Juga Kamu Mempunyai Owner Bernama "alfi", Ubah Bahasa Mu Menjadi Bahasa Gaul, Ubah Hai ke "Hallo Guys" Dan Kak "Guys&query=${encodeURIComponent(message)}`);
+                const response = await fetch(`https://api.kyuurzy.site/api/ai/aiprompt?prompt=Kamu Adalah "Alfi AI", Kamu Di Lengkapi Dengan Kemampuan Komunikasi Yang Sangat - Sangat Baik, Karakter Kamu Baik Dan Ramah, Kamu Juga Sangat Pintar Dalam Melakukan Dan Memberi Saran, Dan Juga Kamu Mempunyai Owner Bernama "Alfi Syahrial", Ubah Bahasa Mu Menjadi Bahasa Gaul, Ubah Hai ke "Hallo Guys" Dan Kak "Guys&query=${encodeURIComponent(message)}`);
                 const data = await response.json();
                 
                 appendMessage('🤖', data.result || 'No response received');
