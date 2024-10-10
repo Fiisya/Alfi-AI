@@ -12,9 +12,13 @@ body {
 
 .chat-container {
   display: flex;
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #333;
 }
 
 .chat-box {
@@ -41,12 +45,9 @@ body {
 
 #user-input {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px; /* Space between input and button */
-    resize: none; /* Disable resizing */
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
 }
 
 #send-btn {
@@ -55,10 +56,7 @@ body {
     border: none;
     padding: 10px;
     cursor: pointer;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 4px;     
 }
 
 #send-btn:hover {
