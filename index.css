@@ -35,13 +35,12 @@ body {
 }
 
 .chat-box .user-message {
-    align-self: flex-end;
-    background-color: #e5ddd5;
-    color: white;
-    border-radius: 8px;
-    padding: 8px 12px;
-    margin-bottom: 10px;
-    max-width: 70%;
+    padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 #user-input {
