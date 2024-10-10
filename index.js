@@ -2,7 +2,7 @@ document.getElementById('send-btn').addEventListener('click', async () => {
             const userInput = document.getElementById('user-input').value;
             if (!userInput.trim()) return;
 
-            appendMessage('👤', userInput);
+            appendMessage('', userInput);
             document.getElementById('user-input').value = '';
 
             await fetchAIResponse(userInput);
@@ -12,7 +12,7 @@ document.getElementById('send-btn').addEventListener('click', async () => {
             const chatBox = document.getElementById('chat-box');
             const messageElement = document.createElement('div');
             messageElement.classList.add('message');
-            messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            messageElement.innerHTML = `<strong>${sender}</strong> ${message}`;
             chatBox.appendChild(messageElement);
             chatBox.scrollTop = chatBox.scrollHeight;
         }
