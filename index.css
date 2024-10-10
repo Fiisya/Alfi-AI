@@ -44,24 +44,25 @@ body {
 }
 
 #user-input {
-    width: 100%;
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
+    border: none;
+    padding: 10px;
+    width: calc(100% - 60px);
+    margin-right: 10px;
 }
 
-        #send-btn {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
+#send-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
 
-        #send-btn:hover {
-            background-color: #0056b3;
-        }
+#send-btn:hover {
+    background-color: #0056b3;
+}
+
 .timestamp {
     font-size: 0.8em;
     color: gray;
