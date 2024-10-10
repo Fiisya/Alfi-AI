@@ -80,14 +80,14 @@ body {
 }
 
 #user-input input[type="text"] {
-  flex: 1;
+  flex: 1; /* Takes up the remaining space */
   background-color: #565869;
   border: none;
   color: #fff;
   padding: 12px;
   font-size: 16px;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-right: 10px; /* Adds some space between input and button */
 }
 
 #user-input input[type="text"]::placeholder {
