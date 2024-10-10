@@ -3,16 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1">
-    <title>Alfi AI </title>
-    <link rel="stylesheet" href="index.css">
+    <title>Alfi AI</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .chat-container {
+            width: 600px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            max-height: 90vh;
+        }
+
+        .chat-header {
+            background-color: #10a37f;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .chat-box {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .chat-box .message {
+            margin-bottom: 15px;
+            padding: 12px 16px;
+            background-color: #f6f6f7;
+            border-radius: 16px;
+            max-width: 75%;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        .chat-box .user-message {
+            align-self: flex-end;
+            background-color: #007bff;
+            color: white;
+            border-radius: 16px;
+            padding: 12px 16px;
+            margin-bottom: 15px;
+            max-width: 75%;
+        }
+
+        #user-input-container {
+            display: flex;
+            padding-top: 10px;
+        }
+
+        #user-input {
+            border: none;
+            padding: 12px;
+            width: calc(100% - 70px);
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+        }
+
+        #send-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        #send-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .timestamp {
+            font-size: 0.75em;
+            color: gray;
+            margin-top: 5px;
+            display: block;
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
-	<div class="chat-container">
+    <div class="chat-container">
         <div class="chat-header">
             Alfi AI
         </div>
         <div class="chat-box" id="chat-box"></div>
-        <div class="input-container">
+        <div class="input-container" id="user-input-container">
             <textarea id="user-input" placeholder="Type a message..."></textarea>
             <button id="send-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -20,7 +114,45 @@
                 </svg>
             </button>
         </div>
-    </div>    
-    <script src="index.js"></script>
+    </div>
+
+    <script>
+        document.getElementById('send-btn').addEventListener('click', async () => {
+            const userInput = document.getElementById('user-input').value;
+            if (!userInput.trim()) return;
+
+            appendMessage('You', userInput);
+            document.getElementById('user-input').value = '';
+
+            await fetchAIResponse(userInput);
+        });
+
+        function appendMessage(sender, message) {
+            const chatBox = document.getElementById('chat-box');
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message');
+            messageElement.innerHTML = `<strong>${sender}</strong>: ${message}`;
+            chatBox.appendChild(messageElement);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        async function fetchAIResponse(message) {
+            try {
+                const response = await fetch(`https://api.kyuurzy.site/api/ai/aiprompt?prompt=Kamu Adalah "Alfi AI", Kamu Di Lengkapi Dengan Kemampuan Komunikasi Yang Sangat - Sangat Baik, Karakter Kamu Baik Dan Ramah, Kamu Juga Sangat Pintar Dalam Melakukan Dan Memberi Saran, Dan Juga Kamu Mempunyai Owner Bernama "Alfi Syahrial", Ubah Bahasa Mu Menjadi Bahasa Gaul, Ubah Hai ke "Hallo Guys" Dan Kak "Guys&query=${encodeURIComponent(message)}`);
+                const data = await response.json();
+                
+                appendMessage('🤖', data.result || 'No response received');
+            } catch (error) {
+                appendMessage('🤖', 'Error: Unable to connect to the API');
+                console.error('API Error:', error);
+            }
+        }
+
+        document.getElementById('user-input').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('send-btn').click();
+            }
+        });
+    </script>
 </body>
 </html>
