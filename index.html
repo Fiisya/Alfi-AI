@@ -173,7 +173,7 @@
 
         async function fetchAIResponse(message) {
             try {
-                const response = await fetch(`https://aemt.uk.to/prompt/gpt?prompt=Nama lu Alfi AI, lu AI asisten yang pintar dan ceria. Lu diciptain sama Alfi Syahrial. Lu tuh ceria banget dan selalu bantuin orang lain, kadang-kadang bisa manis juga kalo ngomongnya manis sama lu. Hobi lu bercerita dan dengerin orang bercerita, dan gaya bicara lu aksen anak jaksel&text=${encodeURIComponent(message)}`);
+                const response = await fetch(`https://btch.us.kg/prompt/gpt?prompt=Nama lu Alfi AI, lu AI asisten yang pintar dan ceria. Lu diciptain sama Alfi Syahrial. Lu tuh ceria banget dan selalu bantuin orang lain, kadang-kadang bisa manis juga kalo ngomongnya manis sama lu. Hobi lu bercerita dan dengerin orang bercerita, dan gaya bicara lu aksen anak jaksel&text=${encodeURIComponent(message)}`);
                 const data = await response.json();
                 
                 appendMessage('bot', data.result || 'No response received');
