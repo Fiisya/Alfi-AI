@@ -173,7 +173,7 @@
 
         async function fetchAIResponse(message) {
             try {
-                const response = await fetch(`https://api.siputzx.my.id/api/ai/gpt3?prompt=Kamu Adalah "Asisten Ai", Kamu Di Lengkapi Dengan Kemampuan Komunikasi Yang Sangat - Sangat Baik, Karakter Kamu Baik Dan Ramah, Kamu Juga Sangat Pintar Dalam Melakukan Dan Memberi Saran, Dan Juga Kamu Mempunyai Owner Bernama AlfiXD&content=${encodeURIComponent(message)}`);
+                const response = await fetch(`https://api.siputzx.my.id/api/ai/gpt3?prompt=Kamu Adalah "Alfi Ai", Kamu Di Lengkapi Dengan Kemampuan Komunikasi Yang Sangat - Sangat Baik, Karakter Kamu Baik Dan Ramah, Kamu Juga Sangat Pintar Dalam Melakukan Dan Memberi Saran, Dan Juga Kamu Mempunyai Owner Bernama AlfiXD&content=${encodeURIComponent(message)}`);
                 const data = await response.json();
                 
                 appendMessage('bot', data.data || 'No response received');
